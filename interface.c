@@ -9,22 +9,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <interface.h>
-#include <vector.h>
-#include <array.h>
+#include <ctype.h>
+#include <unistd.h>
+#include "interface.h"
+#include "vector.h"
+#include "array.h"
 
 #define LINE_LENGTH 256
 #define MAX_TOKENS 16
 
 #define OPERAND_VECTOR 1
-#define OPERAND_VECTOR 2
+#define OPERAND_NUMBER 2
 
 /**
 * @brief (Define Function)
 * @param[direction] parameter_name (Define its Parameters)
 * @remark (Ad extraneous cases)
 */
-static void print_vector(const char *name, vect v){
+static void print_vector(const char *name, vector v){
 	printf("%s = %g %g %g\n", name, v.x, v.y, v.z);
 }
 
@@ -32,18 +34,25 @@ static void print_vector(const char *name, vect v){
 * @brief prints a simple usage message to console to assist in proper input and other commands.
 */
 void print_help(void){
-	printf(
-		"VectorCalc - a minimal vector calculator (w/ 3 component vectors)\n"
-		"VectorCalc [-h]\n"
-		"Commands - *Spaces are required around '=' and operators*:\n"
-		""
-		""
-		"list	- All stored vectors\n"
-		"clear	- All stored vectors\n"
-		"help	- Shows Help Menu\n"
-		"quit	- Exit the program\n"
+	printf("\nVectorCalc - a minimal vector calculator (w/ 3 component vectors)\n"
 		"\n"
-		"up to %d vectors may be stored at once.\n, MAX_VECTORS"
+		"VectorCalc [-h]\n"
+		"\n"
+		"Commands - *Spaces are required around '=' and operators*:\n"
+		" a = 1 2 3			Create/replace vector(s)\n"
+		" a 				Create/replace vector(s)\n"
+		" a + b				Create/replace vector(s)\n"
+		" a - b				Create/replace vector(s)\n"
+		" a * 2.5			Create/replace vector(s)\n"
+		" a . b				Create/replace vector(s)\n"
+		" a x b 				Create/replace vector(s)\n"
+		" c = a + b			Create/replace vector(s)\n"
+		" list				- All stored vectors\n"
+		" clear				- All stored vectors\n"
+		" help				- Shows Help Menu\n"
+		" quit				- Exit the program\n"
+		"\n"
+		"up to %d vectors may be stored at once.\n", MAX_VECTORS
 	);
 }
 
@@ -52,7 +61,7 @@ void print_help(void){
 * @param[direction] parameter_name (Define its Parameters)
 * @remark (Ad extraneous cases)
 */
-static int is_number(constant char *s, double *out){
+static int is_number(const char *s, double *out){
 	char *end;
 	
 	if(!(isdigit((unsigned char)s[0]) || ((s[0] == '-' || s[0] == '+' || s[0] == '.') && s[1] != '\0'))){
@@ -62,8 +71,8 @@ static int is_number(constant char *s, double *out){
 	/**
 	* @brief strtod take the incoming char s and turns it into a floating point value provided by stdlib.h strtod(constant char *ptr, char *ptr2)
 	*/
-	*out = strtod(s,&end);
-	return end != s && *end == '0';
+	*out = strtod(s, &end);
+	return end != s && *end == '\0';
 }
 
 /**
@@ -72,7 +81,7 @@ static int is_number(constant char *s, double *out){
 * @remark (Ad extraneous cases)
 */
 static int is_reserved(const char *s){
-	return strcmp(s, "quit") == 0 || strcmp (s, "clear") == 0 || strcmp(s, "list") == 0 || strcmp(s,"help") ==0; 
+	return strcmp(s, "quit") == 0 || strcmp (s, "clear") == 0 || strcmp(s, "list") == 0 || strcmp(s,"help") == 0 || strcmp(s,"exit") == 0; 
 }
 
 /**
@@ -80,14 +89,14 @@ static int is_reserved(const char *s){
 * @param[direction] parameter_name (Define its Parameters)
 * @remark (Ad extraneous cases)
 */
-static int is_valid(const char *s){
+static int is_valid_name(const char *s){
 	size_t i;
 	
-	if(!isalpha((unsigned char)s[0] || strlen(s) >= NAME_LENGTH || is_reserved(s)){
+	if(!isalpha((unsigned char)s[0]) || strlen(s) >= NAME_LENGTH || is_reserved(s)){
 		return 0;
 	}
 	for(i = 1; s[i] != '\0'; i++){
-		if(!isalnum((unsigned char)s[i] && s[i] != '_'){
+		if(!isalnum((unsigned char)s[i]) && s[i] != '_'){
 			return 0;
 		}
 	}
@@ -99,7 +108,7 @@ static int is_valid(const char *s){
 * @param[direction] parameter_name (Define its Parameters)
 */
 static int is_operator(const char *s){
-	return strlen(s) == 1 & strchr("+-*.x",s[0]) != NULL;
+	return strlen(s) == 1 && strchr("+-*.x",s[0]) != NULL;
 }
 
 /**
@@ -107,14 +116,14 @@ static int is_operator(const char *s){
 * @param[direction] parameter_name (Define its Parameters)
 * @remark (Ad extraneous cases)
 */
-static int get_operand(const char *tok, vector *v, double *d){
-	if(is_number(tok, d)){
+static int get_operand(const char *token, vector *v, double *d){
+	if(is_number(token, d)){
 		return OPERAND_NUMBER;
 	}
-	if(findvector(tok, v) == 0){
+	if(findvector(token, v) == 0){
 		return OPERAND_VECTOR;
 	}
-	printf("Error: '%s' is not a number or and existing vector\n, tok);
+	printf("Error: '%s' is not a number or and existing vector\a\n", token);
 	return 0;
 }
 
@@ -123,7 +132,7 @@ static int get_operand(const char *tok, vector *v, double *d){
 * @param[direction] parameter_name (Define its Parameters)
 * @remark (Ad extraneous cases)
 */
-static int evalueate(const char *l, const char *op, const char *r, vector *vres, double *sres, int *is_scalar){
+static int evaluate(const char *l, const char *op, const char *r, vector *vres, double *sres, int *is_scalar){
 	vector lv,rv;
 	double ld,rd;
 	int    lt,rt;
@@ -132,7 +141,7 @@ static int evalueate(const char *l, const char *op, const char *r, vector *vres,
 	if(lt == 0){
 		return -1;
 	}
-	rt = get_operand(l,&lv, &ld);
+	rt = get_operand(r, &rv, &rd);
 	if(rt == 0){
 		return -1;
 	}
@@ -142,16 +151,16 @@ static int evalueate(const char *l, const char *op, const char *r, vector *vres,
 		case '+':
 		case '-':
 			if(lt != OPERAND_VECTOR || rt != OPERAND_VECTOR){
-				printf("Error: '%s' requires two vectors \a\n, op");
+				printf("Error: '%s' requires two vectors \a\n", op);
 				return -1;
 			}
 			*vres = (op[0] == '+') ? add (lv, rv): sub(lv, rv);
 			return 0;
 		case '*':
-			if(lt == OPERAND_VECTOR || rt != OPERAND_VECTOR){
-				*vres = scale(rv, lv);
+			if(lt == OPERAND_VECTOR && rt == OPERAND_NUMBER){
+				*vres = scale(lv, rd);
 			}else if (lt == OPERAND_NUMBER && rt == OPERAND_VECTOR){
-				*vres = scale (rv,ld);
+				*vres = scale(rv,ld);
 			}else{ 
 				printf("Error: '*' requires one vector and one number\a\n");
 				return-1;
@@ -184,7 +193,7 @@ static void do_list(void){
 	vector v;
 	
 	if(n == 0){
-		printf("No vectors stored\n");
+		printf("No vectors stored\a\n");
 		return;
 	}
 	for(i = 0; i < n; i++){
@@ -209,23 +218,23 @@ static void store_and_show(const char * name, vector v){
 * @brief (Define Function)
 * @param[direction] parameter_name (Define its Parameters)
 */
-static void assignment(char *tok[], int n){
-	const char *name = tok[0];
-	int m = n -2;
-	char **rhs = tok +2;
+static void assignment(char *token[], int n){
+	const char *name = token[0];
+	int m = n - 2;
+	char **rhs = token + 2;
 	vector v;
 	double val[3] = {0.0, 0.0,0.0};
 	double s;
-	int is _scalar, i;
+	int is_scalar, i;
 	
 	
 	if(!is_valid_name(name)){
-		printf("Error: invalid vector name 's'\a\n", name);
+		printf("Error: invalid vector name '%s'\a\n", name);
 		return;
 	}
 	
 	if(m == 3 && is_operator(rhs[1])){
-		if(evaluate(rhs[0], rhs[1], rhs[2], &v, %s, %is_scalar) != 0){
+		if(evaluate(rhs[0], rhs[1], rhs[2], &v, &s, &is_scalar) != 0){
 			return;
 		}
 		if(is_scalar){
@@ -240,7 +249,7 @@ static void assignment(char *tok[], int n){
 		printf("Error: expected 2 or 3 values after '='\a\n");
 		return;
 	}
-	if(i = 0; i < m; i++){
+	for(i = 0; i < m; i++){
 		if(!is_number(rhs[i], &val[i])){
 			printf("Error: '%s' is not a valid number\a\n", rhs[i]);
 			return;
@@ -268,9 +277,9 @@ static int input_handler(char *line){
 			*p = ' ';
 		}
 	}
-	for(p = strtok(line, " \t\r\n"); p != NULL; p = strtok(NULL, "\t\r\n")){
+	for(p = strtok(line, " \t\r\n"); p != NULL; p = strtok(NULL, " \t\r\n")){
 		if(n == MAX_TOKENS){
-			printf(Error: too many items on the line\a\n");
+			printf("Error: too many items on the line\a\n");
 			return 0;
 		}
 		token[n++] = p;
@@ -279,25 +288,37 @@ static int input_handler(char *line){
 		return 0;
 	}
 	
-	/*
-	* @remark Currently implemented incorrectly will fix by next push
-	*/
-	
 	if( n == 1){
-		if(strcmp(token[0], "list") == 0){
+		if(strcmp(token[0], "quit") == 0){
 			return 1;
-		}		if(strcmp(token[0], "list") == 0){
+		} else if(strcmp(token[0], "exit") == 0){
 			return 1;
-		}		if(strcmp(token[0], "clear") == 0){
-			return 1;
-		}		if(strcmp(token[0], "help") == 0){
-			return 1;
-		}		if(strcmp(token[0], "list") == 0){
-			return 1;
-		}		if(strcmp(token[0], "list") == 0){
-			return 1;
+		} else if(strcmp(token[0], "list") == 0){
+			do_list();
+		} else if(strcmp(token[0], "clear") == 0){
+			clearvectors();
+			printf("All vectors cleared\a\n");
+		} else if(strcmp(token[0], "help") == 0){
+			print_help();
+		} else if(findvector(token[0], &v) == 0){
+			print_vector(v.name, v);
+		} else {
+			printf("Error: vector '%s' does not exist\a\n", token[0]);
 		}
+	} else if(n == 3 && is_operator(token[1])){
+		if(evaluate(token[0], token[1], token[2], &v, &s, &is_scalar) == 0){
+			if(is_scalar){
+				printf("ans = %g\n", s);
+			} else {
+				print_vector("ans",v);
+			}
+		}
+	} else if (n >= 3 && strcmp(token[1], "=") == 0){
+		assignment(token, n);
+	} else {
+		printf("Error: invalid command (type 'help' for usage)\n");
 	}
+	return 0;
 }
 
 /**
@@ -305,5 +326,25 @@ static int input_handler(char *line){
 * @param[direction] parameter_name (Define its Parameters)
 */
 void runCalc(void){
+	char line[LINE_LENGTH];
 	
+	for(;;){
+		printf("VectorCalc> ");
+		fflush(stdout);
+		if(fgets(line, sizeof(line), stdin) == NULL){
+			printf("\n");
+			break;
+		}
+		if(strchr(line, '\n') == NULL && strlen(line) == LINE_LENGTH -1){
+			int c;
+			while((c = getchar()) != '\n' && c != EOF){
+				;
+			}
+			printf("Error: line too long\a\n");
+			continue;
+		}
+		if(input_handler(line)){
+			break;
+		}
+	}
 }

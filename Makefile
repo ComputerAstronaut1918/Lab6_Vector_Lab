@@ -1,18 +1,18 @@
 #*************************
-# @file MakeFile
-# @breif MakeFile to compile Lab 6 VectorCalc
+# @file MakerFile
+# @breif MakerFile to complie VectorCalc
 # @author Harley Soto
-# @date 10/10/26
+# @date 09/15/26
 #
 # @version 1.0
 #*************************
 
 CC=gcc
-CFLAGS=-c
+CFLAGS=-c 
 LDFLAGS=
-SOURCES= VectorCalc.c Vector.c Interface.c Array.c
+SOURCES= VectorCalc.c vector.c interface.c array.c
 OBJECTS=$(SOURCES:.c=.o)
-EXECUTABLE=VectorCalc
+EXECUTABLE= VectorCalc
 
 all: $(SOURCES) $(EXECUTABLE) 
 
@@ -27,5 +27,5 @@ $(EXECUTABLE): $(OBJECTS)
 	$(CC) -MM $< > $*.d
 	
 clean:
-	rm -rf $(OBJECTS) $(EXECUTABLE) *.d	   
+	rm -rf $(OBJECTS) $(EXECUTABLE) *.d
 	   

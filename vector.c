@@ -1,55 +1,62 @@
 /*************************
-* @file 
+* @file Vector.c 
 * @breif 
 * @author Harley Soto
 * @date
 *
 * @version 1.0
 *************************/
-#ifndef VECTOR.H
-#define VECTOR.H
-#define NAME_LENGTH 32
-
-typedef struct{
-	char name[NAME_LENGTH]
-	double x;
-	double y;
-	double z;
-}vector;
+#include "vector.h"
 
 /**
 * @brief (Define Function)
 * @param[direction] parameter_name (Define its Parameters)
 * @remark (Ad extraneous cases)
 */
-vector add(vect a, vect b)
+vector add(vector a, vector b){
+	vector r = {"", a.x + b.x, a.y + b.y, a.z + b.z};
+	return r;
+}
 
 /**
 * @brief takes the input of vector values and subs them accordingly
 * @param[in] parameter_name (Define its Parameters)
 * @remark inputted values may be a floating point number and should be handled accordingly
 */
-vector sub(vect a, vect b)
+vector sub(vector a, vector b){
+	vector r = {"", a.x - b.x, a.y - b.y, a.z - b.z};
+	return r;
+}
 
 /**
 * @brief (Define Function)
 * @param[direction] parameter_name (Define its Parameters)
 * @remark (Ad extraneous cases)
 */
-vector scale(vect a, double s)
+vector scale(vector a, double s){
+	vector r = {"", a.x * s, a.y * s, a.z * s};
+	return r;
+}
 
 /**
 * @brief (Define Function)
 * @param[direction] parameter_name (Define its Parameters)
-* @remark Extra Credit Case
+* @remark (Ad extraneous cases)
 */
-double dot(vect a, vect b)
+double dot(vector a, vector b){
+	return a.x * b.x + a.y * b.y + a.z * b.z;
+}
 
 /**
 * @brief (Define Function)
 * @param[direction] parameter_name (Define its Parameters)
-* @remark Extra Credit Case
+* @remark (Ad extraneous cases)
 */
-vector cross(vect a, vect b)
-
-#endif
+vector cross(vector a, vector b){
+	vector r;
+	r.name[0] = '\0';
+	r.x = a.y * b.z - a.z * b.y;
+	r.y = a.z * b.x - a.x * b.z;
+	r.z = a.x * b.y - a.y * b.x;
+	return r; 
+}

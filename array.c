@@ -24,7 +24,7 @@ static vector store[MAX_VECTORS];
 int addvector(vector v){
 	int i;
 	
-	int empty = -1
+	int empty = -1;
 	
 	for (i = 0; i < MAX_VECTORS; i++){
 		if(store[i].name[0] == '\0'){
@@ -48,7 +48,7 @@ int addvector(vector v){
 * @param[direction] parameter_name (Define its Parameters)
 * @remark (Ad extraneous cases)
 */
-int findvector(const char *name, vect *out){
+int findvector(const char *name, vector *out){
 	int i;
 	
 	for(i = 0; i < MAX_VECTORS; i++){
@@ -79,7 +79,7 @@ int countvectors(void){
 	
 	for (i = 0; i < MAX_VECTORS; i++){
 		if(store[i].name[0] != '\0'){
-			n++
+			n++;
 		}
 	}
 	return n;
@@ -90,7 +90,7 @@ int countvectors(void){
 * @param[direction] parameter_name (Define its Parameters)
 * @remark (Ad extraneous cases)
 */
-int getvector(int n, vector *out){
+int getvectors(int n, vector *out){
 	int i, seen = 0;
 	
 	for(i = 0; i < MAX_VECTORS; i++){

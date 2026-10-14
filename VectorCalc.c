@@ -9,7 +9,7 @@
 *************************/
 #include <stdio.h>
 #include <string.h>
-#include "Interface.h"
+#include "interface.h"
 
 /**
 * @brief main - Takes any input argument such as help,exit,calc, etc.
@@ -24,7 +24,7 @@ int main(int argc, char *argv[]){
 		return 0;
 	}
 	if(argc > 1){
-		fprintf(stdrr, "usage: %s [-h]\n",argv[0]);
+		fprintf(stderr, "usage: %s [-h]\n",argv[0]);
 		return 1;
 	}
 	runCalc();
