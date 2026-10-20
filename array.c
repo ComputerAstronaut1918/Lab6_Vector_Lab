@@ -1,25 +1,23 @@
 /*************************
-* @file 
-* @breif 
+* @file array.c
+* @brief  
 * @author Harley Soto
-* @date
+* @date 10/15/26
 *
 * @version 1.0
 *************************/
 #include <string.h>
 #include "array.h"
 
-/**
-* @brief (Define Function)
-* @param[direction] parameter_name (Define its Parameters)
-* @remark (Ad extraneous cases)
+/**	
+* @brief creates the array structure for the vectors to be stored in
 */
 static vector store[MAX_VECTORS];
 
 /**
-* @brief (Define Function)
-* @param[direction] parameter_name (Define its Parameters)
-* @remark (Ad extraneous cases)
+* @brief adds a vector v struct to the array
+* @param[in] v (Define its Parameters)
+* @remark in the case that a vector empty/DNE it will return a -1 to interface.
 */
 int addvector(vector v){
 	int i;
@@ -44,9 +42,10 @@ int addvector(vector v){
 }
 
 /**
-* @brief (Define Function)
-* @param[direction] parameter_name (Define its Parameters)
-* @remark (Ad extraneous cases)
+* @brief finds the given vector and returns its x,y,z values
+* @param[in] *name the inputted name of vector
+* @param[out] *out (Define its Parameters)
+* @remark in the case a vector DNE it will return -1 to Interface
 */
 int findvector(const char *name, vector *out){
 	int i;
@@ -61,8 +60,7 @@ int findvector(const char *name, vector *out){
 } 
 
 /**
-* @brief (Define Function)
-* @param[direction] parameter_name (Define its Parameters)
+* @brief clears the stored array structure of all arrays
 * @remark (Ad extraneous cases)
 */
 void clearvectors(void){
@@ -70,8 +68,7 @@ void clearvectors(void){
 }
 
 /**
-* @brief (Define Function)
-* @param[direction] parameter_name (Define its Parameters)
+* @brief counts the number of vectors to ensure it does not pass the predefined limit of 10
 * @remark (Ad extraneous cases)
 */
 int countvectors(void){
@@ -86,8 +83,9 @@ int countvectors(void){
 }
 
 /**
-* @brief (Define Function)
-* @param[direction] parameter_name (Define its Parameters)
+* @brief this returns the vector from the typedef structure of arrays
+* @param[in] n (Define its Parameters)
+* @param[out] *out (Define its Parameters)
 * @remark (Ad extraneous cases)
 */
 int getvectors(int n, vector *out){

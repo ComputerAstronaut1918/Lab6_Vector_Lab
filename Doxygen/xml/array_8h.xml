@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="array_8h" kind="file" language="C++">
+    <compoundname>array.h</compoundname>
+    <includes refid="vector_8h" local="yes">vector.h</includes>
+    <includedby refid="array_8c" local="yes">//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c</includedby>
+    <includedby refid="interface_8c" local="yes">//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/interface.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.h</label>
+        <link refid="array_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vector.h</label>
+        <link refid="vector_8h_source"/>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="array_8h_1af4f906437da52520077add92dc3de52e" prot="public" static="no">
+        <name>MAX_VECTORS</name>
+        <initializer>10</initializer>
+        <briefdescription>
+<para>This is the defined max of Vectors to hold as noted in the Lab-procedures. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.h" line="17" column="9" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="array_8h_1a8cb5e5aced9b753e15d48b62c4612cd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int addvector</definition>
+        <argsstring>(vector v)</argsstring>
+        <name>addvector</name>
+        <param>
+          <type><ref refid="structvector" kindref="compound">vector</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>this fucntion adds a vector to the array list </para>
+        </briefdescription>
+        <detaileddescription>
+<para>adds a vector v struct to the array</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gives the listed Struct of the V vector to add to the array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>if the array reaches it defined 10 Vector max the function returns -1</para>
+</simplesect>
+this fucntion adds a vector to the array list</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Define its Parameters) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>in the case that a vector empty/DNE it will return a -1 to interface. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.h" line="24" column="5" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" bodystart="22" bodyend="42" declfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.h" declline="24" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="array_8h_1a642a7b3bc864fd803acd3258480e6b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int findvector</definition>
+        <argsstring>(const char *name, vector *out)</argsstring>
+        <name>findvector</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector" kindref="compound">vector</ref> *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+<para>this will find vectors to calculate, listed in the created vector array </para>
+        </briefdescription>
+        <detaileddescription>
+<para>finds the given vector and returns its x,y,z values</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this receives a 32 char limit name defined in the vector array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>return of vector array out </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>if the vector *out is not found the function returns -1</para>
+</simplesect>
+this will find vectors to calculate, listed in the created vector array</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the inputted name of vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Define its Parameters) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>in the case a vector DNE it will return -1 to Interface </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.h" line="32" column="5" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" bodystart="50" bodyend="60" declfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.h" declline="32" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="array_8h_1a131b5c13dbe2cf72232310a8ad4e3b88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearvectors</definition>
+        <argsstring>(void)</argsstring>
+        <name>clearvectors</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>this function clears the vectors store in array </para>
+        </briefdescription>
+        <detaileddescription>
+<para>clears the stored array structure of all arrays</para>
+<para>this function clears the vectors store in array</para>
+<para><simplesect kind="remark"><para>(Ad extraneous cases) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.h" line="37" column="6" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" bodystart="66" bodyend="68" declfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.h" declline="37" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="array_8h_1ab8d80ea4f167e46ad98f1f688feadc3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int countvectors</definition>
+        <argsstring>(void)</argsstring>
+        <name>countvectors</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>counts the number of vectors in the array* </para>
+        </briefdescription>
+        <detaileddescription>
+<para>counts the number of vectors to ensure it does not pass the predefined limit of 10</para>
+<para>counts the number of vectors in the array*</para>
+<para><simplesect kind="remark"><para>(Ad extraneous cases) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.h" line="42" column="5" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" bodystart="74" bodyend="83" declfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.h" declline="42" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="array_8h_1a2f3104916aee8bd0ced11357b0116a6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getvectors</definition>
+        <argsstring>(int n, vector *out)</argsstring>
+        <name>getvectors</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector" kindref="compound">vector</ref> *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+<para>this will find vectors to list, listed in the created vector array </para>
+        </briefdescription>
+        <detaileddescription>
+<para>this returns the vector from the typedef structure of arrays</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of vectors wanting to pull from the array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>if a vector is out of range the function returns -1</para>
+</simplesect>
+this will find vectors to list, listed in the created vector array</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Define its Parameters) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Define its Parameters) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>(Ad extraneous cases) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.h" line="49" column="5" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" bodystart="91" bodyend="104" declfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.h" declline="49" declcolumn="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>@file<sp/>array.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>@brief<sp/>a<sp/>definer<sp/>file<sp/>for<sp/>array<sp/>with<sp/>Defined<sp/>constants</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>@author<sp/>Harley<sp/>Soto</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>@date<sp/>10/15/26</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>@version<sp/>1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ARRAY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ARRAY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;vector.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_VECTORS<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>addvector(<ref refid="structvector" kindref="compound">vector</ref><sp/>v);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>findvector(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/><ref refid="structvector" kindref="compound">vector</ref><sp/>*out);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clearvectors(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>countvectors(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getvectors(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/><ref refid="structvector" kindref="compound">vector</ref><sp/>*out);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.h"/>
+  </compounddef>
+</doxygen>

@@ -1,8 +1,8 @@
 /*************************
 * @file interface.c
-* @breif 
+* @brief  
 * @author Harley Soto
-* @date
+* @date 10/15/26
 *
 * @version 1.0
 *************************/
@@ -23,7 +23,8 @@
 
 /**
 * @brief (Define Function)
-* @param[direction] parameter_name (Define its Parameters)
+* @param[in] *name this is the 32 char limit character name assigned
+* @param[in] v this is the returned vector from the typedef structure array
 * @remark (Ad extraneous cases)
 */
 static void print_vector(const char *name, vector v){
@@ -39,26 +40,27 @@ void print_help(void){
 		"VectorCalc [-h]\n"
 		"\n"
 		"Commands - *Spaces are required around '=' and operators*:\n"
-		" a = 1 2 3			Create/replace vector(s)\n"
-		" a 				Create/replace vector(s)\n"
-		" a + b				Create/replace vector(s)\n"
-		" a - b				Create/replace vector(s)\n"
-		" a * 2.5			Create/replace vector(s)\n"
-		" a . b				Create/replace vector(s)\n"
-		" a x b 				Create/replace vector(s)\n"
-		" c = a + b			Create/replace vector(s)\n"
-		" list				- All stored vectors\n"
-		" clear				- All stored vectors\n"
-		" help				- Shows Help Menu\n"
-		" quit				- Exit the program\n"
+		" a = 1 2 3			Create/replace vector(s)						\n"
+		" a 				Creates a empty vector							\n"
+		" a + b				Adds the vector(s) values 						\n"
+		" a - b				Sub the vector(s) values 						\n"
+		" a * 2.5			Multiplies a vector by the defined constant  	\n"
+		" a . b				Create/replace vector(s)						\n"
+		" a x b 			Create/replace vector(s)						\n"
+		" c = a + b			Create/replace vector(s)						\n"
+		" list				- List(s) All stored vectors					\n"
+		" clear				- Clear(s) All stored vectors					\n"
+		" help				- Shows a Help Menu								\n"
+		" quit				- Exit the program								\n"
 		"\n"
 		"up to %d vectors may be stored at once.\n", MAX_VECTORS
 	);
 }
 
 /**
-* @brief (Define Function)
-* @param[direction] parameter_name (Define its Parameters)
+* @brief this is a number check to determine if a number was used and if its valid/ check for not vector
+* @param[in] *s (Define its Parameters)
+* @param[in] *out (Define its Parameters)
 * @remark (Ad extraneous cases)
 */
 static int is_number(const char *s, double *out){
@@ -76,7 +78,7 @@ static int is_number(const char *s, double *out){
 }
 
 /**
-* @brief (Define Function)
+* @brief this defines if the inputted character is a predefined character if not will return a error or check
 * @param[direction] parameter_name (Define its Parameters)
 * @remark (Ad extraneous cases)
 */
@@ -85,8 +87,8 @@ static int is_reserved(const char *s){
 }
 
 /**
-* @brief (Define Function)
-* @param[direction] parameter_name (Define its Parameters)
+* @brief this determines if the name given is valid for use / prevents duplicates and 32 char limit
+* @param[in] *s (Define its Parameters)
 * @remark (Ad extraneous cases)
 */
 static int is_valid_name(const char *s){
@@ -104,7 +106,7 @@ static int is_valid_name(const char *s){
 }
 
 /**
-* @brief (Define Function)
+* @brief this determines if the value given was a number or a vector to calculate
 * @param[direction] parameter_name (Define its Parameters)
 */
 static int is_operator(const char *s){
@@ -112,7 +114,7 @@ static int is_operator(const char *s){
 }
 
 /**
-* @brief (Define Function)
+* @brief this gets the operand for calculation... 
 * @param[direction] parameter_name (Define its Parameters)
 * @remark (Ad extraneous cases)
 */
@@ -128,7 +130,7 @@ static int get_operand(const char *token, vector *v, double *d){
 }
 
 /**
-* @brief (Define Function)
+* @brief this evaluates the given values for the calculation and determines if it follows the rules
 * @param[direction] parameter_name (Define its Parameters)
 * @remark (Ad extraneous cases)
 */
@@ -185,8 +187,7 @@ static int evaluate(const char *l, const char *op, const char *r, vector *vres, 
 }
 
 /**
-* @brief (Define Function)
-* @param[direction] parameter_name (Define its Parameters)
+* @brief this list the vectors for printing / counts
 */
 static void do_list(void){
 	int i,n = countvectors();
@@ -215,7 +216,7 @@ static void store_and_show(const char * name, vector v){
 	}
 }
 /**
-* @brief (Define Function)
+* @brief this assigns the values for the struct array
 * @param[direction] parameter_name (Define its Parameters)
 */
 static void assignment(char *token[], int n){
@@ -261,7 +262,7 @@ static void assignment(char *token[], int n){
 	store_and_show(name, v);
 }
 /**
-* @brief (Define Function)
+* @brief this function handles input and check for numbers/ vectors / and commands
 * @param[direction] parameter_name (Define its Parameters)
 */
 static int input_handler(char *line){
@@ -322,8 +323,7 @@ static int input_handler(char *line){
 }
 
 /**
-* @brief (Define Function)
-* @param[direction] parameter_name (Define its Parameters)
+* @brief this is the (main) run function for the program after its starts in VectorCalc
 */
 void runCalc(void){
 	char line[LINE_LENGTH];

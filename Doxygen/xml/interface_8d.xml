@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="interface_8d" kind="file" language="D">
+    <compoundname>interface.d</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">interface.o:<sp/>interface.c<sp/>interface.h<sp/><ref refid="structvector" kindref="compound">vector</ref>.h<sp/>array.h</highlight></codeline>
+    </programlisting>
+    <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/interface.d"/>
+  </compounddef>
+</doxygen>

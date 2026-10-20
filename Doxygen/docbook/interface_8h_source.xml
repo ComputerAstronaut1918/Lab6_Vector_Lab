@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_interface_8h_source" xml:lang="en-US">
+<title>//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/interface.h</title>
+<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*************************</emphasis>
+2 <emphasis role="comment">*&#32;@file&#32;interface.h</emphasis>
+3 <emphasis role="comment">*&#32;@brief&#32;a&#32;definer&#32;file&#32;for&#32;interface&#32;with&#32;Defined&#32;constants</emphasis>
+4 <emphasis role="comment">*&#32;@author&#32;Harley&#32;Soto</emphasis>
+5 <emphasis role="comment">*&#32;@date&#32;10/15/26</emphasis>
+6 <emphasis role="comment">*</emphasis>
+7 <emphasis role="comment">*&#32;@version&#32;1.0</emphasis>
+8 <emphasis role="comment">*************************/</emphasis>
+9 <emphasis role="preprocessor">#ifndef&#32;INTERFACE_H</emphasis>
+10 <emphasis role="preprocessor">#define&#32;INTERFACE_H</emphasis>
+11 
+15 <emphasis role="keywordtype">void</emphasis>&#32;print_help(<emphasis role="keywordtype">void</emphasis>);
+16 
+20 <emphasis role="keywordtype">void</emphasis>&#32;runCalc(<emphasis role="keywordtype">void</emphasis>);
+21 
+22 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

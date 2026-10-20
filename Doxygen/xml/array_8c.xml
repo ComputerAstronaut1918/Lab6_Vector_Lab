@@ -1,0 +1,335 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="array_8c" kind="file" language="C++">
+    <compoundname>array.c</compoundname>
+    <includes local="no">string.h</includes>
+    <includes refid="array_8h" local="yes">array.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c</label>
+        <link refid="array_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>array.h</label>
+        <link refid="array_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>vector.h</label>
+        <link refid="vector_8h_source"/>
+      </node>
+      <node id="2">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="array_8c_1aa8da49d5ce094cef99bfb14eaf81e617" prot="public" static="yes" mutable="no">
+        <type><ref refid="structvector" kindref="compound">vector</ref></type>
+        <definition>vector store[MAX_VECTORS]</definition>
+        <argsstring>[MAX_VECTORS]</argsstring>
+        <name>store</name>
+        <briefdescription>
+<para>creates the array structure for the vectors to be stored in </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" line="15" column="15" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="array_8c_1a8cb5e5aced9b753e15d48b62c4612cd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int addvector</definition>
+        <argsstring>(vector v)</argsstring>
+        <name>addvector</name>
+        <param>
+          <type><ref refid="structvector" kindref="compound">vector</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>adds a vector v struct to the array </para>
+        </briefdescription>
+        <detaileddescription>
+<para>this fucntion adds a vector to the array list</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Define its Parameters) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>in the case that a vector empty/DNE it will return a -1 to interface.</para>
+</simplesect>
+adds a vector v struct to the array</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gives the listed Struct of the V vector to add to the array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>if the array reaches it defined 10 Vector max the function returns -1 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" line="22" column="5" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" bodystart="22" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="array_8c_1a642a7b3bc864fd803acd3258480e6b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int findvector</definition>
+        <argsstring>(const char *name, vector *out)</argsstring>
+        <name>findvector</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector" kindref="compound">vector</ref> *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+<para>finds the given vector and returns its x,y,z values </para>
+        </briefdescription>
+        <detaileddescription>
+<para>this will find vectors to calculate, listed in the created vector array</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the inputted name of vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Define its Parameters) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>in the case a vector DNE it will return -1 to Interface</para>
+</simplesect>
+finds the given vector and returns its x,y,z values</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this receives a 32 char limit name defined in the vector array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>return of vector array out </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>if the vector *out is not found the function returns -1 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" line="50" column="5" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" bodystart="50" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="array_8c_1a131b5c13dbe2cf72232310a8ad4e3b88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearvectors</definition>
+        <argsstring>(void)</argsstring>
+        <name>clearvectors</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>clears the stored array structure of all arrays </para>
+        </briefdescription>
+        <detaileddescription>
+<para>this function clears the vectors store in array</para>
+<para><simplesect kind="remark"><para>(Ad extraneous cases)</para>
+</simplesect>
+clears the stored array structure of all arrays </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" line="66" column="6" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="array_8c_1ab8d80ea4f167e46ad98f1f688feadc3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int countvectors</definition>
+        <argsstring>(void)</argsstring>
+        <name>countvectors</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>counts the number of vectors to ensure it does not pass the predefined limit of 10 </para>
+        </briefdescription>
+        <detaileddescription>
+<para>counts the number of vectors in the array*</para>
+<para><simplesect kind="remark"><para>(Ad extraneous cases)</para>
+</simplesect>
+counts the number of vectors to ensure it does not pass the predefined limit of 10 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" line="74" column="5" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" bodystart="74" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="array_8c_1a2f3104916aee8bd0ced11357b0116a6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getvectors</definition>
+        <argsstring>(int n, vector *out)</argsstring>
+        <name>getvectors</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector" kindref="compound">vector</ref> *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+<para>this returns the vector from the typedef structure of arrays </para>
+        </briefdescription>
+        <detaileddescription>
+<para>this will find vectors to list, listed in the created vector array</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Define its Parameters) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Define its Parameters) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>(Ad extraneous cases)</para>
+</simplesect>
+this returns the vector from the typedef structure of arrays</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of vectors wanting to pull from the array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>if a vector is out of range the function returns -1 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" line="91" column="5" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c" bodystart="91" bodyend="104"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>@file<sp/>array.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>@brief<sp/><sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>@author<sp/>Harley<sp/>Soto</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>@date<sp/>10/15/26</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>@version<sp/>1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;array.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structvector" kindref="compound">vector</ref><sp/>store[MAX_VECTORS];</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>addvector(<ref refid="structvector" kindref="compound">vector</ref><sp/>v){</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>empty<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>MAX_VECTORS;<sp/>i++){</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(store[i].name[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(empty<sp/>&lt;<sp/>0){</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>empty<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(store[i].name,<sp/>v.name)<sp/>==<sp/>0){</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>store[i]<sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(empty<sp/>&lt;<sp/>0){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>store[empty]<sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>findvector(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/><ref refid="structvector" kindref="compound">vector</ref><sp/>*out){</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>MAX_VECTORS;<sp/>i++){</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(store[i].name[0]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>strcmp(store[i].name,<sp/>name)<sp/>==<sp/>0){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*out<sp/>=<sp/>store[i];</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clearvectors(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(store,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(store));</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>countvectors(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>n<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>MAX_VECTORS;<sp/>i++){</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(store[i].name[0]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n++;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getvectors(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/><ref refid="structvector" kindref="compound">vector</ref><sp/>*out){</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>seen<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>MAX_VECTORS;<sp/>i++){</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(store[i].name[0]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(seen<sp/>==<sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*out<sp/>=<sp/>store<sp/>[i];</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>seen++;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/array.c"/>
+  </compounddef>
+</doxygen>

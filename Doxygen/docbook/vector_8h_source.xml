@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_vector_8h_source" xml:lang="en-US">
+<title>//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.h</title>
+<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*************************</emphasis>
+2 <emphasis role="comment">*&#32;@file&#32;vector.h</emphasis>
+3 <emphasis role="comment">*&#32;@brief&#32;a&#32;definer&#32;file&#32;for&#32;vector&#32;with&#32;Defined&#32;constants</emphasis>
+4 <emphasis role="comment">*&#32;@author&#32;Harley&#32;Soto</emphasis>
+5 <emphasis role="comment">*&#32;@date&#32;10/15/26</emphasis>
+6 <emphasis role="comment">*</emphasis>
+7 <emphasis role="comment">*&#32;@version&#32;1.0</emphasis>
+8 <emphasis role="comment">*************************/</emphasis>
+9 <emphasis role="preprocessor">#ifndef&#32;VECTOR_H</emphasis>
+10 <emphasis role="preprocessor">#define&#32;VECTOR_H</emphasis>
+11 
+15 <emphasis role="preprocessor">#define&#32;NAME_LENGTH&#32;32</emphasis>
+16 
+17 
+21 
+22 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>{
+23 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;name[NAME_LENGTH];
+24 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;x;
+25 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;y;
+26 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;z;
+27 }&#32;<link linkend="_structvector">vector</link>;
+28 
+36 <link linkend="_structvector">vector</link>&#32;add(<link linkend="_structvector">vector</link>&#32;a,&#32;<link linkend="_structvector">vector</link>&#32;b);
+37 
+45 <link linkend="_structvector">vector</link>&#32;sub(<link linkend="_structvector">vector</link>&#32;a,&#32;<link linkend="_structvector">vector</link>&#32;b);
+46 
+54 <link linkend="_structvector">vector</link>&#32;scale(<link linkend="_structvector">vector</link>&#32;a,&#32;<emphasis role="keywordtype">double</emphasis>&#32;s);
+55 
+63 <emphasis role="keywordtype">double</emphasis>&#32;dot(<link linkend="_structvector">vector</link>&#32;a,&#32;<link linkend="_structvector">vector</link>&#32;b);
+64 
+72 <link linkend="_structvector">vector</link>&#32;cross(<link linkend="_structvector">vector</link>&#32;a,&#32;<link linkend="_structvector">vector</link>&#32;b);
+73 
+74 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

@@ -1,10 +1,11 @@
 /*************************
 * @file VectorCalc.c
-* @breif 
+* @brief Execuatable file for the Vector Calculator
 * @author Harley Soto
-* @date
+* @date 10/15/26
 *
-* Compile: gcc -o vectorcal VectorCal.c
+* Compile: gcc -o vectorcal VectorCal.c vector.c array.c interface.c 
+* @note - calculator is programmed with Noise when a error Occurs at each Print - Statement
 * @version 1.0
 *************************/
 #include <stdio.h>
@@ -12,10 +13,9 @@
 #include "interface.h"
 
 /**
-* @brief main - Takes any input argument such as help,exit,calc, etc.
+* @brief main - Takes any input argument such from terminal to execute in Interface.c
 * @param[in] argc takes input values 
-* @param[in] argv takes input characters.
-* @remark (Ad extraneous cases)
+* @param[in] argv takes input array of characters.
 */
 
 int main(int argc, char *argv[]){

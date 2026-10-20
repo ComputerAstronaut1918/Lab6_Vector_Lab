@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.18.0" xml:lang="en-US">
+  <compound refid="structvector" kind="struct"><name>vector</name>
+    <member refid="structvector_1a89a88337d531d6b5590602d97b5df8c0" kind="variable"><name>name</name></member>
+    <member refid="structvector_1af88b946fb90d5f08b5fb740c70e98c10" kind="variable"><name>x</name></member>
+    <member refid="structvector_1ab927965981178aa1fba979a37168db2a" kind="variable"><name>y</name></member>
+    <member refid="structvector_1ab3e6ed577a7c669c19de1f9c1b46c872" kind="variable"><name>z</name></member>
+  </compound>
+  <compound refid="array_8c" kind="file"><name>array.c</name>
+    <member refid="array_8c_1aa8da49d5ce094cef99bfb14eaf81e617" kind="variable"><name>store</name></member>
+    <member refid="array_8c_1a8cb5e5aced9b753e15d48b62c4612cd2" kind="function"><name>addvector</name></member>
+    <member refid="array_8c_1a642a7b3bc864fd803acd3258480e6b24" kind="function"><name>findvector</name></member>
+    <member refid="array_8c_1a131b5c13dbe2cf72232310a8ad4e3b88" kind="function"><name>clearvectors</name></member>
+    <member refid="array_8c_1ab8d80ea4f167e46ad98f1f688feadc3d" kind="function"><name>countvectors</name></member>
+    <member refid="array_8c_1a2f3104916aee8bd0ced11357b0116a6b" kind="function"><name>getvectors</name></member>
+  </compound>
+  <compound refid="array_8d" kind="file"><name>array.d</name>
+  </compound>
+  <compound refid="array_8h" kind="file"><name>array.h</name>
+    <member refid="array_8h_1af4f906437da52520077add92dc3de52e" kind="define"><name>MAX_VECTORS</name></member>
+    <member refid="array_8h_1a8cb5e5aced9b753e15d48b62c4612cd2" kind="function"><name>addvector</name></member>
+    <member refid="array_8h_1a642a7b3bc864fd803acd3258480e6b24" kind="function"><name>findvector</name></member>
+    <member refid="array_8h_1a131b5c13dbe2cf72232310a8ad4e3b88" kind="function"><name>clearvectors</name></member>
+    <member refid="array_8h_1ab8d80ea4f167e46ad98f1f688feadc3d" kind="function"><name>countvectors</name></member>
+    <member refid="array_8h_1a2f3104916aee8bd0ced11357b0116a6b" kind="function"><name>getvectors</name></member>
+  </compound>
+  <compound refid="interface_8c" kind="file"><name>interface.c</name>
+    <member refid="interface_8c_1ad5131de0b5004c64db5e79e8aac7471e" kind="define"><name>LINE_LENGTH</name></member>
+    <member refid="interface_8c_1a09886d6ba96e67553bf3c49ed8ade975" kind="define"><name>MAX_TOKENS</name></member>
+    <member refid="interface_8c_1a2ae2d78c1154715c216f575650ad240a" kind="define"><name>OPERAND_VECTOR</name></member>
+    <member refid="interface_8c_1a9edcba5cb9e6e1a7ac17ca6457af2010" kind="define"><name>OPERAND_NUMBER</name></member>
+    <member refid="interface_8c_1a5c5554029da5fa550290f69a4cdf2c45" kind="function"><name>print_vector</name></member>
+    <member refid="interface_8c_1a402ea961bfc2ffeee61e3a7c330b1559" kind="function"><name>print_help</name></member>
+    <member refid="interface_8c_1a733226e01e030cc55da5584b1a074cbf" kind="function"><name>is_number</name></member>
+    <member refid="interface_8c_1ae9de53f341595383e47f5b847f223cd4" kind="function"><name>is_reserved</name></member>
+    <member refid="interface_8c_1a0013370a887d63bd5cead23722280fab" kind="function"><name>is_valid_name</name></member>
+    <member refid="interface_8c_1a6cce721aa6636dea0845dba1668f7b66" kind="function"><name>is_operator</name></member>
+    <member refid="interface_8c_1a5e9e153e73a48bca27f9582352c1db34" kind="function"><name>get_operand</name></member>
+    <member refid="interface_8c_1a6cb1deb873fb1f17bf82fe45701de213" kind="function"><name>evaluate</name></member>
+    <member refid="interface_8c_1a6dc3a870113b81b79ff385757cdb1df3" kind="function"><name>do_list</name></member>
+    <member refid="interface_8c_1a4b1985188de990903a0974fdf53e20df" kind="function"><name>store_and_show</name></member>
+    <member refid="interface_8c_1ac0dc1a8e7be8121f58e7fa7257638869" kind="function"><name>assignment</name></member>
+    <member refid="interface_8c_1a8e54e924f90cbfec70548bbda4c917f8" kind="function"><name>input_handler</name></member>
+    <member refid="interface_8c_1a872fc11d2a590884425e27c1207fd9dc" kind="function"><name>runCalc</name></member>
+  </compound>
+  <compound refid="interface_8d" kind="file"><name>interface.d</name>
+  </compound>
+  <compound refid="interface_8h" kind="file"><name>interface.h</name>
+    <member refid="interface_8h_1a402ea961bfc2ffeee61e3a7c330b1559" kind="function"><name>print_help</name></member>
+    <member refid="interface_8h_1a872fc11d2a590884425e27c1207fd9dc" kind="function"><name>runCalc</name></member>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="vector_8c" kind="file"><name>vector.c</name>
+    <member refid="vector_8c_1abe16d7d15d7c7878c560e6ee5643dc6d" kind="function"><name>add</name></member>
+    <member refid="vector_8c_1a02be5c38911ab73606f7d69c18de9542" kind="function"><name>sub</name></member>
+    <member refid="vector_8c_1a20a0cabf0f2d0124866564f34dcd2ee0" kind="function"><name>scale</name></member>
+    <member refid="vector_8c_1aece0828dd40737f264e85f668ff8246b" kind="function"><name>dot</name></member>
+    <member refid="vector_8c_1ab29471f38d46f26591ccc793b0168297" kind="function"><name>cross</name></member>
+  </compound>
+  <compound refid="vector_8d" kind="file"><name>vector.d</name>
+  </compound>
+  <compound refid="vector_8h" kind="file"><name>vector.h</name>
+    <member refid="vector_8h_1af71324c57f05ff9e24bd384925dd6b17" kind="define"><name>NAME_LENGTH</name></member>
+    <member refid="vector_8h_1abe16d7d15d7c7878c560e6ee5643dc6d" kind="function"><name>add</name></member>
+    <member refid="vector_8h_1a02be5c38911ab73606f7d69c18de9542" kind="function"><name>sub</name></member>
+    <member refid="vector_8h_1a20a0cabf0f2d0124866564f34dcd2ee0" kind="function"><name>scale</name></member>
+    <member refid="vector_8h_1aece0828dd40737f264e85f668ff8246b" kind="function"><name>dot</name></member>
+    <member refid="vector_8h_1ab29471f38d46f26591ccc793b0168297" kind="function"><name>cross</name></member>
+  </compound>
+  <compound refid="_vector_calc_8c" kind="file"><name>VectorCalc.c</name>
+    <member refid="_vector_calc_8c_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_vector_calc_8d" kind="file"><name>VectorCalc.d</name>
+  </compound>
+</doxygenindex>

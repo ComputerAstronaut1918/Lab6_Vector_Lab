@@ -1,8 +1,8 @@
 #*************************
-# @file MakerFile
-# @breif MakerFile to complie VectorCalc
+# @file MakeFile
+# @brief MakerFile to compile VectorCalc
 # @author Harley Soto
-# @date 09/15/26
+# @date 10/15/26
 #
 # @version 1.0
 #*************************

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="structvector" kind="struct" language="C++" prot="public">
+    <compoundname>vector</compoundname>
+    <includes refid="vector_8h" local="no">vector.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvector_1a89a88337d531d6b5590602d97b5df8c0" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char name[NAME_LENGTH]</definition>
+        <argsstring>[NAME_LENGTH]</argsstring>
+        <name>name</name>
+        <qualifiedname>vector::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.h" line="23" column="6" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvector_1af88b946fb90d5f08b5fb740c70e98c10" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>vector::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.h" line="24" column="8" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvector_1ab927965981178aa1fba979a37168db2a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>vector::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.h" line="25" column="8" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvector_1ab3e6ed577a7c669c19de1f9c1b46c872" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>vector::z</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.h" line="26" column="8" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>creates a array of Vectors with Name , Value x, Value y, and Value z. Up to 3 values </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.h" line="22" column="1" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.h" bodystart="22" bodyend="27"/>
+    <listofallmembers>
+      <member refid="structvector_1a89a88337d531d6b5590602d97b5df8c0" prot="public" virt="non-virtual"><scope>vector</scope><name>name</name></member>
+      <member refid="structvector_1af88b946fb90d5f08b5fb740c70e98c10" prot="public" virt="non-virtual"><scope>vector</scope><name>x</name></member>
+      <member refid="structvector_1ab927965981178aa1fba979a37168db2a" prot="public" virt="non-virtual"><scope>vector</scope><name>y</name></member>
+      <member refid="structvector_1ab3e6ed577a7c669c19de1f9c1b46c872" prot="public" virt="non-virtual"><scope>vector</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

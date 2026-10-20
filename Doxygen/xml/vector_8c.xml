@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="vector_8c" kind="file" language="C++">
+    <compoundname>vector.c</compoundname>
+    <includes refid="vector_8h" local="yes">vector.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.c</label>
+        <link refid="vector_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vector.h</label>
+        <link refid="vector_8h_source"/>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="vector_8c_1abe16d7d15d7c7878c560e6ee5643dc6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structvector" kindref="compound">vector</ref></type>
+        <definition>vector add</definition>
+        <argsstring>(vector a, vector b)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="structvector" kindref="compound">vector</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector" kindref="compound">vector</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>takes the input of vector value and adds them accordingly </para>
+        </briefdescription>
+        <detaileddescription>
+<para>takes the input of vector values and adds them accordingly</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the first defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the second defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>This function can take a constant,float or vector if previously defined </para>
+</simplesect>
+<simplesect kind="return"><para>r - Vector Value / Calculation</para>
+</simplesect>
+takes the input of vector value and adds them accordingly</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the first defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the second defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>This function can take a integers/floats/or Vectors if previously defined </para>
+</simplesect>
+<simplesect kind="return"><para>r - Vector Value / Calculation </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.c" line="18" column="8" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.c" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="vector_8c_1a02be5c38911ab73606f7d69c18de9542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structvector" kindref="compound">vector</ref></type>
+        <definition>vector sub</definition>
+        <argsstring>(vector a, vector b)</argsstring>
+        <name>sub</name>
+        <param>
+          <type><ref refid="structvector" kindref="compound">vector</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector" kindref="compound">vector</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>takes the input of vector values and subs them accordingly </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the first defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the second defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>This function can take a integers/floats/or Vectors if previously defined </para>
+</simplesect>
+<simplesect kind="return"><para>r - Vector Value / Calculation </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.c" line="30" column="8" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.c" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="vector_8c_1a20a0cabf0f2d0124866564f34dcd2ee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structvector" kindref="compound">vector</ref></type>
+        <definition>vector scale</definition>
+        <argsstring>(vector a, double s)</argsstring>
+        <name>scale</name>
+        <param>
+          <type><ref refid="structvector" kindref="compound">vector</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>takes the input of vector value and scales them accordingly </para>
+        </briefdescription>
+        <detaileddescription>
+<para>takes the input of vector values and subs them accordingly</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the first defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the second defined case value that MUST be a constant to scale the first Value/Vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>This function can take a constant,float or vector if previously defined </para>
+</simplesect>
+<simplesect kind="return"><para>r - Vector Value / Calculation</para>
+</simplesect>
+takes the input of vector value and scales them accordingly</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the first defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the second defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>This function can take a integers/floats/or Vectors if previously defined </para>
+</simplesect>
+<simplesect kind="return"><para>r - Vector Value / Calculation </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.c" line="42" column="8" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.c" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="vector_8c_1aece0828dd40737f264e85f668ff8246b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double dot</definition>
+        <argsstring>(vector a, vector b)</argsstring>
+        <name>dot</name>
+        <param>
+          <type><ref refid="structvector" kindref="compound">vector</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector" kindref="compound">vector</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>takes the input of vector value and multiplies them accordingly </para>
+        </briefdescription>
+        <detaileddescription>
+<para>takes the input of vector values and subs them accordingly</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the first defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the second defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>This function can take a constant,float or vector if previously defined </para>
+</simplesect>
+<simplesect kind="return"><para>r - Vector Value / Calculation</para>
+</simplesect>
+takes the input of vector value and multiplies them accordingly</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the first defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the second defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>This function can take a integers/floats/or Vectors if previously defined </para>
+</simplesect>
+<simplesect kind="return"><para>r - Vector Value / Calculation </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.c" line="54" column="8" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.c" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="vector_8c_1ab29471f38d46f26591ccc793b0168297" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structvector" kindref="compound">vector</ref></type>
+        <definition>vector cross</definition>
+        <argsstring>(vector a, vector b)</argsstring>
+        <name>cross</name>
+        <param>
+          <type><ref refid="structvector" kindref="compound">vector</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector" kindref="compound">vector</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>takes the input of vector value and multiplies them using a third values using matrix </para>
+        </briefdescription>
+        <detaileddescription>
+<para>takes the input of vector values and subs them accordingly</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the first defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the second defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>This function can take a constant,float or vector if previously defined </para>
+</simplesect>
+<simplesect kind="return"><para>r - Vector Value / Calculation</para>
+</simplesect>
+takes the input of vector value and multiplies them using a third values using matrix</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the first defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the second defined case value take a constant (1,2,3...) or a vector (a,b,c...) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="remark"><para>This function can take a integers/floats/or Vectors if previously defined </para>
+</simplesect>
+<simplesect kind="return"><para>r - Vector Value / Calculation </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.c" line="65" column="8" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.c" bodystart="65" bodyend="72"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>@file<sp/>vector.c<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>@brief<sp/>Calculated<sp/>vectors<sp/>dependent<sp/>on<sp/>selected<sp/>method<sp/>add,sub,scale,dot,cross.<sp/>(Equations)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>@author<sp/>Harley<sp/>Soto</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>@date<sp/>10/15/26</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>@version<sp/>1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;vector.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="structvector" kindref="compound">vector</ref><sp/>add(<ref refid="structvector" kindref="compound">vector</ref><sp/>a,<sp/><ref refid="structvector" kindref="compound">vector</ref><sp/>b){</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvector" kindref="compound">vector</ref><sp/>r<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>a.x<sp/>+<sp/>b.x,<sp/>a.y<sp/>+<sp/>b.y,<sp/>a.z<sp/>+<sp/>b.z};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="structvector" kindref="compound">vector</ref><sp/>sub(<ref refid="structvector" kindref="compound">vector</ref><sp/>a,<sp/><ref refid="structvector" kindref="compound">vector</ref><sp/>b){</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvector" kindref="compound">vector</ref><sp/>r<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>a.x<sp/>-<sp/>b.x,<sp/>a.y<sp/>-<sp/>b.y,<sp/>a.z<sp/>-<sp/>b.z};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><ref refid="structvector" kindref="compound">vector</ref><sp/>scale(<ref refid="structvector" kindref="compound">vector</ref><sp/>a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>s){</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvector" kindref="compound">vector</ref><sp/>r<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>a.x<sp/>*<sp/>s,<sp/>a.y<sp/>*<sp/>s,<sp/>a.z<sp/>*<sp/>s};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dot(<ref refid="structvector" kindref="compound">vector</ref><sp/>a,<sp/><ref refid="structvector" kindref="compound">vector</ref><sp/>b){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.x<sp/>*<sp/>b.x<sp/>+<sp/>a.y<sp/>*<sp/>b.y<sp/>+<sp/>a.z<sp/>*<sp/>b.z;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="structvector" kindref="compound">vector</ref><sp/>cross(<ref refid="structvector" kindref="compound">vector</ref><sp/>a,<sp/><ref refid="structvector" kindref="compound">vector</ref><sp/>b){</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvector" kindref="compound">vector</ref><sp/>r;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>r.name[0]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>r.x<sp/>=<sp/>a.y<sp/>*<sp/>b.z<sp/>-<sp/>a.z<sp/>*<sp/>b.y;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>r.y<sp/>=<sp/>a.z<sp/>*<sp/>b.x<sp/>-<sp/>a.x<sp/>*<sp/>b.z;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>r.z<sp/>=<sp/>a.x<sp/>*<sp/>b.y<sp/>-<sp/>a.y<sp/>*<sp/>b.x;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;<sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/vector.c"/>
+  </compounddef>
+</doxygen>

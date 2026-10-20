@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="interface_8h" kind="file" language="C++">
+    <compoundname>interface.h</compoundname>
+    <includedby refid="_vector_calc_8c" local="yes">//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/VectorCalc.c</includedby>
+    <includedby refid="interface_8c" local="yes">//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/interface.c</includedby>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="interface_8h_1a402ea961bfc2ffeee61e3a7c330b1559" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_help</definition>
+        <argsstring>(void)</argsstring>
+        <name>print_help</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>(Define Function) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>prints a simple usage message to console to assist in proper input and other commands.</para>
+<para>(Define Function) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/interface.h" line="15" column="6" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/interface.c" bodystart="37" bodyend="58" declfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/interface.h" declline="15" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_8h_1a872fc11d2a590884425e27c1207fd9dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void runCalc</definition>
+        <argsstring>(void)</argsstring>
+        <name>runCalc</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>(Define Function) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>this is the (main) run function for the program after its starts in VectorCalc</para>
+<para>(Define Function) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/interface.h" line="20" column="6" bodyfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/interface.c" bodystart="328" bodyend="350" declfile="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/interface.h" declline="20" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>@file<sp/>interface.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>@brief<sp/>a<sp/>definer<sp/>file<sp/>for<sp/>interface<sp/>with<sp/>Defined<sp/>constants</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/>@author<sp/>Harley<sp/>Soto</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>@date<sp/>10/15/26</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>@version<sp/>1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INTERFACE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERFACE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print_help(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>runCalc(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="//wsl.localhost/Ubuntu-24.04/home/sotoh/CPE2600/Lab6_Vector_Lab/interface.h"/>
+  </compounddef>
+</doxygen>
