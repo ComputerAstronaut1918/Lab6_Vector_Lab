@@ -1,6 +1,7 @@
-Lab 6 Vector Calculator w/ Dynamic Memory - Harley soto
+**Lab 6 Vector Calculator w/ Dynamic Memory - Harley soto**
 ***
-Brief description
+
+**Program Description**
 
 - building the program
 - running the program
@@ -8,7 +9,8 @@ Brief description
 	- ./VectorCalc : will run the Calculator
 	- ./VectorCalc -h : will display the Help Menu
 ***
-List of supported commands
+
+**List of supported commands**
 
 | Commands               | Usages                                                                                         |
 | ---------------------- | ---------------------------------------------------------------------------------------------- |
@@ -25,4 +27,4 @@ List of supported commands
 | quit / exit            | This will exit the program, and clear memory. Either quit or exit will close the program       |
 
 ***
-Explain how your program uses dynamic memory
+**How does the** ***Vector Calculator*** **use Dynamic Memory for Vector Storage?**
