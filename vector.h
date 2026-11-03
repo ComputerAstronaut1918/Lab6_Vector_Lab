@@ -2,9 +2,9 @@
 * @file vector.h
 * @brief a definer file for vector with Defined constants
 * @author Harley Soto
-* @date 10/15/26
+* @date 11/13/26
 *
-* @version 1.0
+* @version 2.0
 *************************/
 #ifndef VECTOR_H
 #define VECTOR_H

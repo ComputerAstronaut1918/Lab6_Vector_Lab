@@ -2,9 +2,9 @@
 * @file interface.h
 * @brief a definer file for interface with Defined constants
 * @author Harley Soto
-* @date 10/15/26
+* @date 11/13/26
 *
-* @version 1.0
+* @version 2.0
 *************************/
 #ifndef INTERFACE_H
 #define INTERFACE_H

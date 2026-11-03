@@ -2,56 +2,76 @@
 * @file array.c
 * @brief  
 * @author Harley Soto
-* @date 10/15/26
+* @date 11/13/26
 *
-* @version 1.0
+* @version 2.0
 *************************/
+#include <stdlib.h>
 #include <string.h>
+#include <limits.h>
 #include "array.h"
 
-/**	
-* @brief creates the array structure for the vectors to be stored in
+/**
+* @brief (Define Function)
 */
-static vector store[MAX_VECTORS];
+static vector *store = NULL;
 
 /**
-* @brief adds a vector v struct to the array
-* @param[in] v (Define its Parameters)
-* @remark in the case that a vector empty/DNE it will return a -1 to interface.
+* @brief (Define Function)
+*/
+static int count = 0;
+
+/**
+* @brief (Define Function)
+*/
+static int capacity = 0;
+
+
+/**
+* @brief (Define Function)
+* @param[direction] parameter_name (Define its Parameters)
+* @remark (Ad extraneous cases)
 */
 int addvector(vector v){
 	int i;
+	int newcap;
+	vector *bigger;
 	
-	int empty = -1;
-	
-	for (i = 0; i < MAX_VECTORS; i++){
-		if(store[i].name[0] == '\0'){
-			if(empty < 0){
-				empty = i;
-			}
-		}else if (strcmp(store[i].name, v.name) == 0){
+	for(i = 0; i < count; i++){
+		if(strcmp(store[i].name, v.name) == 0){
 			store[i] = v;
 			return 0;
 		}
 	}
-	if (empty < 0){
-		return -1;
+	
+	if(count == capacity){
+		if(capacity > int_max / 2){
+			return -1;
+		}
+		newcap = (capacity == 0) ?
+		INTITIAL_CAPACITY : capacity * 2;
+		bigger = realloc(store, (size_t)newcap * sizeof(vector));
+		
+		if(bigger == NULL){
+			return -1;
+		}
+		store = bigger;
+		capacity = newcap;
 	}
-	store[empty] = v;
+	store[count++] = v;
 	return 0;
 }
 
 /**
-* @brief finds the given vector and returns its x,y,z values
-* @param[in] *name the inputted name of vector
-* @param[out] *out (Define its Parameters)
-* @remark in the case a vector DNE it will return -1 to Interface
+* @brief (Define Function)
+* @param[direction] parameter_name (Define its Parameters)
+* @remark (Ad extraneous cases)
 */
 int findvector(const char *name, vector *out){
 	int i;
 	
-	for(i = 0; i < MAX_VECTORS; i++){
-		if(store[i].name[0] != '\0' && strcmp(store[i].name, name) == 0){
+	for(i = 0; i < count; i++){
+		if(strcmp(storep[i].name, name) == 0){
 			*out = store[i];
 			return 0;
 		}
@@ -60,26 +80,20 @@ int findvector(const char *name, vector *out){
 } 
 
 /**
-* @brief clears the stored array structure of all arrays
-* @remark (Ad extraneous cases)
+* @brief its frees the memory buffer, Nulls the pointter and resets count/capacity using 0
 */
 void clearvectors(void){
-	memset(store, 0, sizeof(store));
+	free(store);
+	store = NULL;
+	count = 0;
+	capacity = 0;
 }
 
 /**
-* @brief counts the number of vectors to ensure it does not pass the predefined limit of 10
-* @remark (Ad extraneous cases)
+* @brief returns the vectors contained in dynamic memory
 */
 int countvectors(void){
-	int i, n = 0;
-	
-	for (i = 0; i < MAX_VECTORS; i++){
-		if(store[i].name[0] != '\0'){
-			n++;
-		}
-	}
-	return n;
+	return count;
 }
 
 /**
@@ -89,16 +103,9 @@ int countvectors(void){
 * @remark (Ad extraneous cases)
 */
 int getvectors(int n, vector *out){
-	int i, seen = 0;
-	
-	for(i = 0; i < MAX_VECTORS; i++){
-		if(store[i].name[0] != '\0'){
-			if(seen == n) {
-				*out = store [i];
-				return 0;
-			}
-			seen++;
-		}
+	if(n < 0 || n >= count){
+		return -1;
 	}
-	return -1;
+	*out = store[n];
+	return 0;
 }

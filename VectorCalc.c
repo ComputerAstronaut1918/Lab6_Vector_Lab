@@ -2,15 +2,17 @@
 * @file VectorCalc.c
 * @brief Execuatable file for the Vector Calculator
 * @author Harley Soto
-* @date 10/15/26
+* @date 11/13/26
 *
 * Compile: gcc -o vectorcal VectorCal.c vector.c array.c interface.c 
 * @note - calculator is programmed with Noise when a error Occurs at each Print - Statement
-* @version 1.0
+* @version 2.0
 *************************/
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "interface.h"
+#include "array.h"
 
 /**
 * @brief main - Takes any input argument such from terminal to execute in Interface.c
@@ -26,6 +28,9 @@ int main(int argc, char *argv[]){
 	if(argc > 1){
 		fprintf(stderr, "usage: %s [-h]\n",argv[0]);
 		return 1;
+	}
+	if(atexit(clearvectors) != 0){
+		fprintf(stderr, "warning: could not register exit hand\a\n")
 	}
 	runCalc();
 	return 0;

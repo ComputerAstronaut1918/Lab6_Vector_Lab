@@ -2,9 +2,9 @@
 # @file MakeFile
 # @brief MakerFile to compile VectorCalc
 # @author Harley Soto
-# @date 10/15/26
+# @date 11/13/26
 #
-# @version 1.0
+# @version 2.0
 #*************************
 
 CC=gcc

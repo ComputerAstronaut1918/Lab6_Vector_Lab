@@ -2,9 +2,9 @@
 * @file array.h
 * @brief a definer file for array with Defined constants
 * @author Harley Soto
-* @date 10/15/26
+* @date 11/13/26
 *
-* @version 1.0
+* @version 2.0
 *************************/
 #ifndef ARRAY_H
 #define ARRAY_H
@@ -12,9 +12,9 @@
 #include "vector.h"
 
 /**
-* @brief This is the defined max of Vectors to hold as noted in the Lab-procedures
+* @brief this defines the starting capacity of the dynamic memory to 10 when the program is started.
 */
-#define MAX_VECTORS 10
+#define INTITIAL_CAPACITY 10
 
 /**
 * @brief this fucntion adds a vector to the array list

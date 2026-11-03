@@ -2,9 +2,9 @@
 * @file vector.c 
 * @brief Calculated vectors dependent on selected method add,sub,scale,dot,cross. (Equations)
 * @author Harley Soto
-* @date 10/15/26
+* @date 11/13/26
 *
-* @version 1.0
+* @version 2.0
 *************************/
 #include "vector.h"
 
@@ -69,4 +69,33 @@ vector cross(vector a, vector b){
 	r.y = a.z * b.x - a.x * b.z;
 	r.z = a.x * b.y - a.y * b.x;
 	return r; 
+}
+
+/**
+* @brief (Define Function)
+* @param[direction] parameter_name (Define its Parameters)
+* @remark (Ad extraneous cases)
+*/
+static int is_reserved(const char *s){
+	return strcmp(s, "quit") == 0 || strcmp(s,"exit") == 0 || strcmp(s,"clear") == 0 || strcmp(s,"list") == 0 || strcmp(s,"help") ==  0 ||strcmp(s,"load") == 0 || strcmp(s,"save") == 0 || strcmp(s,"fill") == 0;
+}
+
+/**
+* @brief (Define Function)
+* @param[direction] parameter_name (Define its Parameters)
+* @remark (Ad extraneous cases)
+*/
+static vector_name_vaild(const char *s){
+	size_t i;
+	
+	if(!isalpha((unsigned char)s[0]) || strlen(s) >= NAME_LENGTH || is_reserved(s)) {
+		return 0;
+	}
+	
+	for(i = 1; s[i] != '\0'; i++){
+		if(!isalnum((unsigned char)s[i]) && s[i] != '_'){
+			return 0;
+		}
+	}
+	return -1;
 }
