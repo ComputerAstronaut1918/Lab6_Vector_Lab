@@ -60,6 +60,11 @@ static int parse_double(char *s, dobule *out){
 	return end != s && *end == '\0';
 }
 
+/**
+* @brief (Define Function)
+* @param[direction] parameter_name (Define its Parameters)
+* @remark (Ad extraneous cases)
+*/
 static int parse_line(char *line, vector *v){
 	char *name, *fx, *fy, *fz;
 	
@@ -87,6 +92,49 @@ static int parse_line(char *line, vector *v){
 	return PARSE_OK;
 }
 
+/**
+* @brief (Define Function)
+* @param[direction] parameter_name (Define its Parameters)
+* @remark (Ad extraneous cases)
+*/
 int loadvectors(const char *fname,int *loaded, int *skipped, int *firstbad){
+	FILE *fp;
+	char *line[CSV_LINE_LENGTH];
+	char *text;
+	int lineno = 0;
+	int toolong, result, c;
+	vector v;
 	
+	*loaded = 0;
+	*skipped = 0;
+	*firstbad = 0;
+	
+	fp  = fopen(fname, "r");
+	if(fp == NULL){
+		return FILE_OPEN_ERROR;
+	}
+	while(fgets(line, sizeof(line), fp) != NULL){
+		lineno++;
+		toolong = (strchar(line, '\n') == NULL && strlen(line) == sizeof(line) -1);
+		if(tooling){
+			while((c = fgetc(fp)) != '\n' && c != EOF){
+				/* enter here somthing to discard file */
+			}
+		}
+	}
+	
+	text = line;
+	
+	if(lineno == 1 &&& strcmp(line, "\xEF\xBB\xBF", 3) == 0){
+		text = line + 3;
+	}
+	
+	result = toolong ? PARSE_BAD : parse_line(text, &v);
+	if(result == PARSE_BLANK){
+		continue;
+	}
+	if(result == PARSE_BAD){
+		(*skipped)++;
+		if(*firstbad == 0 )
+	}
 }

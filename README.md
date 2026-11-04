@@ -4,6 +4,11 @@
 **Program Description**
 
 - building the program
+	- The program uses a make file to compile the program
+		- make - Compiles the program
+		- make clean - will remove all complied files
+	- The program can also be compiled using the line below
+		- gcc -o VectorCalc VectorCalc.c vector.c array.c interface.c - Complies the program 
 - running the program
 	- The program can be ran one of two ways
 	- ./VectorCalc : will run the Calculator
@@ -28,3 +33,4 @@
 
 ***
 **How does the** ***Vector Calculator*** **use Dynamic Memory for Vector Storage?**
+![Dynamic Memory Visual](images/Dynamic Memory - Demonstration.png)

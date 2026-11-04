@@ -10,12 +10,12 @@
 #define INTERFACE_H
 
 /**
-* @brief (Define Function)
+* @brief prints a help/use menu either before the run of the program or during the program.
 */
 void print_help(void);
 
 /**
-* @brief (Define Function)
+* @brief this runs the terminal formatted output
 */
 void runCalc(void);
 
